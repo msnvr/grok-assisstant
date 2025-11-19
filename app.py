@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Config
-openai.api_key = os.getenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 if not openai.api_key:
     st.error("⚠️ Please set your OPENAI_API_KEY in a .env file or Streamlit secrets!")
     st.stop()
